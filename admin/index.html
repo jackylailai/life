@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Life Log · Admin</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <div class="shell shell--header">
+        <a class="brand" href="../">
+          <span class="brand__mark">Life Log</span>
+          <span class="brand__tag">admin</span>
+        </a>
+        <span class="admin-status" id="status" data-state="idle">idle</span>
+        <button type="button" class="ghost-btn" id="clear-token-btn" hidden>clear token</button>
+      </div>
+    </header>
+
+    <main class="shell shell--admin">
+      <!-- token entry -->
+      <section class="panel" id="token-panel" hidden>
+        <h1 class="h2">Sign in</h1>
+        <p class="muted">
+          需要一個 fine-grained PAT，scope：<code>Contents: Read and write</code>，
+          只授權給 <code>jackylailai/life</code> 這個 repo。Token 存在你瀏覽器
+          的 localStorage、不會送去任何別的地方。
+        </p>
+        <p class="muted">
+          <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">→ 開 PAT</a>
+        </p>
+        <form id="token-form" class="field">
+          <label for="token-input">GitHub PAT</label>
+          <input type="password" id="token-input" autocomplete="off" spellcheck="false" required />
+          <button type="submit" class="primary-btn">Save token</button>
+        </form>
+      </section>
+
+      <!-- editor -->
+      <section class="panel" id="editor-panel" hidden>
+        <h1 class="h2">Edit content</h1>
+        <p class="muted" id="loaded-info"></p>
+
+        <form id="content-form"></form>
+
+        <h2 class="h2">Photos</h2>
+        <p class="muted">
+          拖照片進下面區域，會在前端自動 resize（最大寬 2000px、JPEG q=0.85）。
+          按 <em>Save all</em> 時跟 content 一起 commit 進 <code>assets/</code>。
+          路徑像 <code>assets/2026-05-24-foo.jpg</code>，可貼進上面任何文字欄位。
+        </p>
+        <div id="drop-zone" class="drop-zone">
+          <p>把照片拖進來，或 <label for="file-input" class="file-link">選擇檔案</label></p>
+          <input type="file" id="file-input" accept="image/*" multiple hidden />
+        </div>
+        <ul id="pending-images" class="pending-list"></ul>
+
+        <div class="save-bar">
+          <label class="field">
+            <span>Commit message</span>
+            <input type="text" id="commit-message" placeholder="admin: update content" />
+          </label>
+          <button type="button" class="primary-btn" id="save-btn">Save all</button>
+        </div>
+
+        <p class="muted" id="save-result"></p>
+      </section>
+    </main>
+
+    <script src="admin.js" type="module"></script>
+  </body>
+</html>
