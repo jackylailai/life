@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant" data-text="meta.lang" data-attr="lang=meta.lang">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-text="meta.title">Jacky · Life Log</title>
+    <meta name="description" data-attr="content=meta.description" content="" />
+    <meta property="og:title" data-attr="content=meta.ogTitle" content="" />
+    <meta property="og:description" data-attr="content=meta.ogDescription" content="" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-loading">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell shell--header">
+        <a class="brand" href="/">
+          <span class="brand__mark" data-text="header.brand">Life Log</span>
+          <span class="brand__tag" data-text="header.tagline">by Jacky</span>
+        </a>
+        <nav class="nav" aria-label="primary">
+          <ul class="nav__list" data-list="header.links" data-item-template="nav-link"></ul>
+        </nav>
+        <a class="back-link" data-attr="href=header.back.href" data-text="header.back.label" href="#">←</a>
+      </div>
+    </header>
+
+    <template id="nav-link">
+      <li>
+        <a data-bind-attr="href=href" data-bind-text="label" href="#"></a>
+      </li>
+    </template>
+
+    <main id="main">
+      <section class="hero">
+        <div class="shell">
+          <p class="eyebrow" data-copy="hero.eyebrow"></p>
+          <h1 class="display" data-copy="hero.title"></h1>
+          <p class="lead" data-copy="hero.lead"></p>
+          <p class="meta-line" data-copy="hero.meta"></p>
+        </div>
+        <div class="hero__rule" aria-hidden="true"></div>
+      </section>
+
+      <section class="block" id="now">
+        <div class="shell shell--narrow">
+          <p class="kicker" data-text="now.kicker"></p>
+          <h2 class="h2" data-copy="now.title"></h2>
+          <ul class="now-list" data-list="now.lines" data-item-template="now-line"></ul>
+          <p class="meta-line" data-copy="now.updated"></p>
+        </div>
+      </section>
+
+      <template id="now-line">
+        <li data-bind="value"></li>
+      </template>
+
+      <section class="block block--alt" id="journal">
+        <div class="shell shell--narrow">
+          <p class="kicker" data-text="journal.kicker"></p>
+          <h2 class="h2" data-copy="journal.title"></h2>
+          <p class="intro" data-copy="journal.intro"></p>
+          <ol class="journal-list" data-list="journal.entries" data-item-template="journal-entry"></ol>
+        </div>
+      </section>
+
+      <template id="journal-entry">
+        <li class="journal-entry">
+          <span class="journal-entry__date" data-bind-text="date"></span>
+          <h3 class="journal-entry__title" data-bind="title"></h3>
+          <p class="journal-entry__excerpt" data-bind="excerpt"></p>
+        </li>
+      </template>
+
+      <section class="block" id="frames">
+        <div class="shell shell--narrow">
+          <p class="kicker" data-text="frames.kicker"></p>
+          <h2 class="h2" data-copy="frames.title"></h2>
+          <p class="intro" data-copy="frames.intro"></p>
+          <ul class="caption-list" data-list="frames.captions" data-item-template="caption-line"></ul>
+        </div>
+      </section>
+
+      <template id="caption-line">
+        <li data-bind="value"></li>
+      </template>
+
+      <section class="block block--alt" id="about">
+        <div class="shell shell--narrow">
+          <p class="kicker" data-text="about.kicker"></p>
+          <h2 class="h2" data-copy="about.title"></h2>
+          <div class="prose" data-list="about.paragraphs" data-item-template="prose-p"></div>
+          <p class="link-line">
+            <a data-attr="href=about.linkUrl" data-text="about.linkHelper" href="#"></a>
+          </p>
+        </div>
+      </section>
+
+      <template id="prose-p">
+        <p data-bind="value"></p>
+      </template>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p data-copy="footer.copy"></p>
+      </div>
+    </footer>
+
+    <script src="content/render.js" defer></script>
+  </body>
+</html>
