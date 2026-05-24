@@ -72,6 +72,17 @@ a:hover { color: var(--accent-soft); }
   z-index: 100;
 }
 
+/* ---------- top notice ---------- */
+.notice {
+  background: var(--accent);
+  color: var(--paper);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  padding: 8px 16px;
+}
+
 /* ---------- shell ---------- */
 .shell {
   width: min(72rem, calc(100vw - 2 * var(--gap-m)));

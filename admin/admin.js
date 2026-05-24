@@ -20,6 +20,9 @@ const SCHEMA = [
     { path: "meta.ogTitle", label: "OG title", type: "text" },
     { path: "meta.ogDescription", label: "OG description", type: "textarea" },
   ]},
+  { section: "notice", title: "Top notice (leave blank to hide)", fields: [
+    { path: "notice.text", label: "Notice text", type: "text" },
+  ]},
   { section: "header", title: "Header", fields: [
     { path: "header.brand", label: "Brand", type: "text" },
     { path: "header.tagline", label: "Tagline", type: "text" },

@@ -6,6 +6,9 @@
     "ogTitle": "[og title]",
     "ogDescription": "[og description — 分享連結時顯示的副標]"
   },
+  "notice": {
+    "text": "這個網站還在處理中，內容會慢慢補"
+  },
   "header": {
     "brand": "Life Log",
     "tagline": "by Jacky",
