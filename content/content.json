@@ -2,9 +2,9 @@
   "meta": {
     "lang": "zh-Hant",
     "title": "Jacky · Life Log",
-    "description": "Jacky 的生活紀錄 — 籃球、衝浪、旅遊、雜記。寫給自己看，順便讓朋友翻一翻。",
-    "ogTitle": "Jacky · Life Log",
-    "ogDescription": "週末、旅途、海邊、球場 — 寫給自己看的生活筆記。"
+    "description": "[meta description — 一句話描述這個 site]",
+    "ogTitle": "[og title]",
+    "ogDescription": "[og description — 分享連結時顯示的副標]"
   },
   "header": {
     "brand": "Life Log",
@@ -15,63 +15,63 @@
       { "href": "#frames", "label": "Frames" },
       { "href": "#about", "label": "About" }
     ],
-    "back": { "href": "https://jackylailai.github.io/profolio/", "label": "← back to portfolio" }
+    "back": { "href": "https://jackylailai.github.io/profolio/", "label": "[back link label]" }
   },
   "hero": {
-    "eyebrow": "A slower channel.",
-    "title": "生活，==慢慢寫==。",
-    "lead": "白天我在 cluster 跟 dashboards 之間跳來跳去。\n這裡放週末的事——海、球、咖啡、走過的路、看到的光。",
-    "meta": "Vol. 01 · 寫自台北"
+    "eyebrow": "[hero eyebrow]",
+    "title": "[hero title]",
+    "lead": "[hero lead — 一兩句\n介紹這裡是什麼]",
+    "meta": "[hero meta — volume / 日期 / 地點]"
   },
   "now": {
     "kicker": "Now",
-    "title": "最近在做什麼",
+    "title": "[now title]",
     "lines": [
-      "在台北。週末看天氣決定**衝浪**還是**打球**。",
-      "在讀 *The Creative Act* (Rick Rubin)，很慢，每天兩三頁。",
-      "想學認真拍照，先從手機跟一顆定焦鏡開始。"
+      "[now line 1]",
+      "[now line 2]",
+      "[now line 3]"
     ],
     "updated": "更新於 {year}"
   },
   "journal": {
     "kicker": "Journal",
-    "title": "寫過的東西",
-    "intro": "短的多、長的少。先放著，之後慢慢補。",
+    "title": "[journal title]",
+    "intro": "[journal intro — 一句話介紹這個區段]",
     "entries": [
       {
-        "date": "2026 · Spring",
-        "title": "第一篇還沒寫",
-        "excerpt": "想從一篇衝浪的開始——關於海浪怎麼教人 ==等待== 跟 ==順勢==。"
+        "date": "[date 1]",
+        "title": "[entry 1 title]",
+        "excerpt": "[entry 1 excerpt — 一兩句摘要]"
       },
       {
-        "date": "Coming soon",
-        "title": "球場上的事",
-        "excerpt": "也許寫寫週四晚上那群人。"
+        "date": "[date 2]",
+        "title": "[entry 2 title]",
+        "excerpt": "[entry 2 excerpt]"
       }
     ]
   },
   "frames": {
     "kicker": "Frames",
-    "title": "看到的光",
-    "intro": "暫時用文字佔位，照片之後補上。",
+    "title": "[frames title]",
+    "intro": "[frames intro — 一句話介紹這個區段]",
     "captions": [
-      "清晨六點的烏石港，海是灰綠色的。",
-      "球場邊角，下午四點的影子最長。",
-      "一杯黑咖啡跟一本沒讀完的書。"
+      "[caption 1]",
+      "[caption 2]",
+      "[caption 3]"
     ]
   },
   "about": {
     "kicker": "About",
-    "title": "關於這個地方",
+    "title": "[about title]",
     "paragraphs": [
-      "這是個人的 ==生活誌==，跟我的 portfolio 分開。",
-      "Portfolio 寫技術；這邊只寫生活。",
-      "兩邊互相連著，但是兩個不同的 repo、兩種不同的語氣。"
+      "[about paragraph 1]",
+      "[about paragraph 2]",
+      "[about paragraph 3]"
     ],
-    "linkHelper": "去看技術那邊 →",
+    "linkHelper": "[about link helper]",
     "linkUrl": "https://jackylailai.github.io/profolio/"
   },
   "footer": {
-    "copy": "© {year} Jacky · 寫得慢，但有在寫。"
+    "copy": "© {year} [footer copy]"
   }
 }
